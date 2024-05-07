@@ -7,6 +7,6 @@ const Page = async ({ params: { slug } }: {params: {slug: string}}) => {
     if(slug === 'example-redirect'){
         permanentRedirect('/example')
     }
-    return <div>This is a page. Go to <Link style={{color: "blue"}} href="/example-redirect">Example redirect</Link> to see redirection issue due to missing ?rsc param</div>
+    return <div>This is a page. Go to <Link style={{color: "blue"}} href="/example-redirect">Example redirect</Link> Check network, redirection will remove ?rsc query params</div>
 }
 export default Page
